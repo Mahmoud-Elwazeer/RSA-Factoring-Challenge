@@ -19,7 +19,7 @@ void read_file(FILE *file)
 }
 
 /**
- * print_output: Output format: n=p*q
+ * print_output - Output format: n=p*q
  * @n: Number that will convert to p * q
  * Return: void
  */
