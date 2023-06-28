@@ -3,18 +3,18 @@
 import sys
 from math import isqrt
 
-def factorize(number):
+def factor(number):
     for i in range(2, isqrt(number) + 1):
         if number % i == 0:
             return i, number // i
     return None
 
-def process_file(file_path):
+def read_file(file_path):
     try:
         with open(file_path, 'r') as file:
             for line in file:
                 number = int(line.strip())
-                factors = factorize(number)
+                factors = factor(number)
                 if factors:
                     p, q = factors
                     print(f"{number}={q}*{p}")
@@ -28,4 +28,4 @@ if __name__ == '__main__':
         print("Usage: factors <file>")
     else:
         file_path = sys.argv[1]
-        process_file(file_path)
+        read_file(file_path)
