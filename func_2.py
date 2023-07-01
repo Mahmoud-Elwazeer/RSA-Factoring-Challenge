@@ -16,7 +16,7 @@ def get_prime(number):
     for i in range(2, number + 1):
         if i % 2 == 0 and i != 2:
             continue
-        if number % i == 0:
+        elif number % i == 0:
             flag += 1
             if flag == 1:
                 q = i
