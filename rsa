@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from sys import argv
-read_file = __import__('func').read_file
+read_file = __import__('func_2').read_file
 
 if (len(argv) != 2):
     print("Usage: factors <file>")

@@ -4,7 +4,7 @@ from math import isqrt
 
 def get_prime(number):
     """
-    get_factors of number
+    get_prime of number
 
     Args:
         number: number
@@ -13,13 +13,15 @@ def get_prime(number):
         factors
     """
     flag = 0;
-    for i in range(2, isqrt(number) + 1):
+    for i in range(2, number + 1):
         if number % i == 0:
             flag += 1
             if flag == 1:
-                p = i
-            elif flag == 2:
                 q = i
+                if (number == i * i):
+                    return i, i
+            elif flag == 2:
+                p = i
                 return p, q
     return None
 
